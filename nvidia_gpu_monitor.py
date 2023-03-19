@@ -1,4 +1,4 @@
-#v1.0.0
+#v1.0.1
 import tkinter
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ gpu_name        = subprocess.run(['nvidia-smi', '--query-gpu=name', '--format=cs
 driver_ver      = subprocess.run(['nvidia-smi', '--query-gpu=driver_version', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout
 memory_total    = int(subprocess.run(['nvidia-smi', '--query-gpu=memory.total', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout)
 
-if subprocess.run(['nvidia-smi', '--query-gpu=power.limit', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout != '[N/A]':
+if subprocess.run(['nvidia-smi', '--query-gpu=power.limit', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout != '[N/A]\n':
     pwr_max     = float(subprocess.run(['nvidia-smi', '--query-gpu=power.limit', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout)
 else:
     pwr_max     = -1
@@ -92,7 +92,7 @@ def update(frame):
     df['util_vram'][DATA_ROW_N]     =   (df['memory_used'][DATA_ROW_N] / memory_total) * 100
     df['util_pwr'][DATA_ROW_N]      =   (df['pwr_used'][DATA_ROW_N] / pwr_max) * 100
 
-    if subprocess.run(['nvidia-smi', '--query-gpu=power.draw', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout != '[N/A]':
+    if subprocess.run(['nvidia-smi', '--query-gpu=power.draw', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout != '[N/A]\n':
         df['pwr_used'][DATA_ROW_N]  =   float(subprocess.run(['nvidia-smi', '--query-gpu=power.draw', '--format=csv,noheader,nounits'], capture_output=True, text=True).stdout)
     else:
         df['pwr_used'][DATA_ROW_N]  =   -1
