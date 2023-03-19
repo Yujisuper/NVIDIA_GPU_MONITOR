@@ -9,7 +9,7 @@ OS:　Confirmed to run with Ubuntu 20.04 or higher
 ## Install
 First, install the NVIDIA driver and make sure 'nvidia-smi' can run.
 ```
-$ git clone https://github.com/Yujisuper/NVIDIA_GPU_MONITOR.git
+$ git clone https://github.com/Yujisuper/nvidia_gpu_monitor.git
 $ pip3 install tkinter
 $ pip3 install matplotlib
 $ pip3 install pandas
@@ -20,14 +20,14 @@ Settings -> Keyboard Shortcuts -> +
 
 ```
 Name: Any
-Command: python3 (absolute path)/NVIDIA_GPU_MONITOR/nvidia_gpu_monitor.py
+Command: python3 (absolute path)/nvidia_gpu_monitor/nvidia_gpu_monitor.py
 Shortcut: Any
 ```
 
 ## Usage
 Use the shortcut or run the following command.
 ```
-$ cd absolute path)/NVIDIA_GPU_MONITOR/
+$ cd absolute path)/nvidia_gpu_monitor/
 $ python3 nvidia_gpu_monitor.py
 ```
 Running the program will display the GPU usage status.
