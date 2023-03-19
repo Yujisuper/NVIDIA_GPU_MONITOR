@@ -18,6 +18,12 @@ After installation, it is recommended to set up shortcuts as follows
 
 Settings -> Keyboard Shortcuts -> + 
 
+```
+Name: Any
+Command: python3 (absolute path)/NVIDIA_GPU_MONITOR/nvidia_gpu_monitor.py
+Shortcut: Any
+
+```
 
 Name: Any
 
