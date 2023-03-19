@@ -22,14 +22,7 @@ Settings -> Keyboard Shortcuts -> +
 Name: Any
 Command: python3 (absolute path)/NVIDIA_GPU_MONITOR/nvidia_gpu_monitor.py
 Shortcut: Any
-
 ```
-
-Name: Any
-
-Command: python3 (absolute path)/NVIDIA_GPU_MONITOR/nvidia_gpu_monitor.py
-
-Shortcut: Any
 
 ## Usage
 Use the shortcut or run the following command.
